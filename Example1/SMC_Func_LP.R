@@ -30,7 +30,7 @@ SMC_Func_LP=function(T1,theta,W,model)
     
     B.list <- list(thetas,W3,post_model_probs,LogZs) 
     
-    opt_data <- ace(Utility_wrap, start.d=matrix(c(.5,-.5,.5,-.5),1), B=list(B.list,B.list), Q = 12, N1 = 5, N2 = 0, lower=-1, upper = 1, deterministic = TRUE)
+    opt_data <- ace(Utility_wrap, start.d=matrix(c(.5,-.5,.5,-.5),1), B=list(B.list,B.list), Q = 20, N1 = 5, N2 = 0, lower=-1, upper = 1, deterministic = TRUE)
     xdata <- opt_data$phase1.d
     
     ute_t <- rbind(ute_t,t(opt_data$phase1.trace))
