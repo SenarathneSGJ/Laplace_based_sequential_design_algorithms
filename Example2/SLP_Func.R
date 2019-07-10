@@ -102,7 +102,7 @@ SLP_Func <- function(T1,theta,W,model){
     post_model_probs_all = rbind(post_model_probs_all,post_model_probs)
    
     post_sig <- superMatrix(sigma_post1,sigma_post2)
-    Log_det[t1+1] <- det(sigma_post1)
+    Log_det[t1+1] <- log(det(sigma_post1))
     utility[t1+1,]=Utility_wrap(d=xdata,B=list(theta,W,post_model_probs,LogZs))
   }
   
