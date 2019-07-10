@@ -55,7 +55,7 @@ LPSMC_Func=function(T1,theta,W,model)
     post_model_probs_all = rbind(post_model_probs_all,post_model_probs)
     print(post_model_probs)
    
-    W <- W/colSums(W) # Normalised importance weights
+    W <- W/matrix(rep(colSums(W),each=N),nrow=N) # Normalised importance weights
     
     ESS= 1/(colSums(W^2))
     
