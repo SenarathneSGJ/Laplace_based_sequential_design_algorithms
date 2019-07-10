@@ -40,7 +40,7 @@ W1=c(rep((1/N),N))
 W2=c(rep((1/N),N))
 W=data.frame(W1,W2) # partical weights
 
-# Four models={1,2,3,4}
+# Two models={1,2}
 vec_SLP <- SLP_Func(theta=prior,W=W,T1=250,model=1) # selecting design using SLP algorithm
 vec_SMC <- SMC_Func(theta=prior,W=W,T1=250,model=1) # selecting design using SMC algorithm
 vec_LPSMC <- LPSMC_Func(theta=prior,W=W,T1=250,model=1) # selecting design using LP-SMC algorithm
